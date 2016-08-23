@@ -1,0 +1,268 @@
+[
+{
+  "elements": [
+    {
+      "keyword": "Scenario", 
+      "location": "features/browser_navigation.feature:4", 
+      "name": "Reload", 
+      "steps": [], 
+      "tags": [], 
+      "type": "scenario"
+    }, 
+    {
+      "keyword": "Scenario", 
+      "location": "features/browser_navigation.feature:7", 
+      "name": "click link, back and todo persists", 
+      "steps": [], 
+      "tags": [], 
+      "type": "scenario"
+    }
+  ], 
+  "keyword": "Feature", 
+  "location": "features/browser_navigation.feature:1", 
+  "name": "#Enter feature name here", 
+  "status": "passed", 
+  "tags": []
+},
+
+{
+  "description": [
+    "Verify page loading and landing"
+  ], 
+  "elements": [
+    {
+      "keyword": "Scenario", 
+      "location": "features/landing.feature:5", 
+      "name": "Verify page loading and title", 
+      "steps": [
+        {
+          "keyword": "When", 
+          "location": "features/landing.feature:6", 
+          "match": {
+            "arguments": [], 
+            "location": "features/steps/landing.py:5"
+          }, 
+          "name": "TodoMVC is opened in the browser", 
+          "result": {
+            "duration": 4.73987889289856, 
+            "status": "passed"
+          }, 
+          "step_type": "when"
+        }, 
+        {
+          "keyword": "Then", 
+          "location": "features/landing.feature:7", 
+          "match": {
+            "arguments": [
+              {
+                "name": "desired_title", 
+                "value": "React \u2022 TodoMVC"
+              }
+            ], 
+            "location": "features/steps/landing.py:16"
+          }, 
+          "name": "the title reads \"React \u2022 TodoMVC\"", 
+          "result": {
+            "duration": 0.004589080810546875, 
+            "status": "passed"
+          }, 
+          "step_type": "then"
+        }
+      ], 
+      "tags": [
+        "p0"
+      ], 
+      "type": "scenario"
+    }, 
+    {
+      "keyword": "Scenario", 
+      "location": "features/landing.feature:10", 
+      "name": "New todo placeholder text", 
+      "steps": [
+        {
+          "keyword": "When", 
+          "location": "features/landing.feature:11", 
+          "name": "TodoMVC is opened in the browser", 
+          "step_type": "when"
+        }, 
+        {
+          "keyword": "Then", 
+          "location": "features/landing.feature:12", 
+          "name": "placeholder text reads \"What needs to be done?\"", 
+          "step_type": "then"
+        }
+      ], 
+      "tags": [
+        "p2"
+      ], 
+      "type": "scenario"
+    }
+  ], 
+  "keyword": "Feature", 
+  "location": "features/landing.feature:1", 
+  "name": "Landing page of TodoMVC app", 
+  "status": "passed", 
+  "tags": []
+},
+
+{
+  "elements": [
+    {
+      "keyword": "Scenario", 
+      "location": "features/sidebar.feature:4", 
+      "name": "Sidebar does not display", 
+      "steps": [], 
+      "tags": [], 
+      "type": "scenario"
+    }
+  ], 
+  "keyword": "Feature", 
+  "location": "features/sidebar.feature:1", 
+  "name": "#Enter feature name here", 
+  "status": "passed", 
+  "tags": []
+},
+
+{
+  "description": [
+    "The Todo list is the core feature of the web app under test. Todos can be", 
+    "created, modified (marked done) and deleted."
+  ], 
+  "elements": [
+    {
+      "keyword": "Background", 
+      "location": "features/todo_list.feature:5", 
+      "name": "Navigate to TodoMVC", 
+      "steps": [
+        {
+          "keyword": "Given", 
+          "location": "features/todo_list.feature:6", 
+          "name": "TodoMVC is opened in the browser", 
+          "step_type": "given"
+        }
+      ], 
+      "type": "background"
+    }, 
+    {
+      "keyword": "Scenario", 
+      "location": "features/todo_list.feature:9", 
+      "name": "Add todo to blank list", 
+      "steps": [
+        {
+          "keyword": "Given", 
+          "location": "features/todo_list.feature:6", 
+          "match": {
+            "arguments": [], 
+            "location": "features/steps/landing.py:5"
+          }, 
+          "name": "TodoMVC is opened in the browser", 
+          "result": {
+            "duration": 3.472352981567383, 
+            "status": "passed"
+          }, 
+          "step_type": "given"
+        }, 
+        {
+          "keyword": "When", 
+          "location": "features/todo_list.feature:10", 
+          "match": {
+            "arguments": [
+              {
+                "name": "todo", 
+                "value": "Buy Milk"
+              }
+            ], 
+            "location": "features/steps/todo_list.py:7"
+          }, 
+          "name": "a todo for \"Buy Milk\" is added", 
+          "result": {
+            "duration": 0.01703190803527832, 
+            "error_message": [
+              "Traceback (most recent call last):", 
+              "  File \"/Users/williamblase/.virtualenvs/todomvc_test/lib/python2.7/site-packages/behave/model.py\", line 1456, in run", 
+              "    match.run(runner.context)", 
+              "  File \"/Users/williamblase/.virtualenvs/todomvc_test/lib/python2.7/site-packages/behave/model.py\", line 1903, in run", 
+              "    self.func(context, *args, **kwargs)", 
+              "  File \"features/steps/todo_list.py\", line 16, in step_add_todo", 
+              "    todo_textbox = context.browser.find_element_by_class_name(\"new-todo\")", 
+              "  File \"/Users/williamblase/.virtualenvs/todomvc_test/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py\", line 413, in find_element_by_class_name", 
+              "    return self.find_element(by=By.CLASS_NAME, value=name)", 
+              "  File \"/Users/williamblase/.virtualenvs/todomvc_test/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py\", line 752, in find_element", 
+              "    'value': value})['value']", 
+              "  File \"/Users/williamblase/.virtualenvs/todomvc_test/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py\", line 236, in execute", 
+              "    self.error_handler.check_response(response)", 
+              "  File \"/Users/williamblase/.virtualenvs/todomvc_test/lib/python2.7/site-packages/selenium/webdriver/remote/errorhandler.py\", line 192, in check_response", 
+              "    raise exception_class(message, screen, stacktrace)", 
+              "NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"class name\",\"selector\":\"new-todo\"}", 
+              "  (Session info: chrome=52.0.2743.116)", 
+              "  (Driver info: chromedriver=2.23.409710 (0c4084804897ac45b5ff65a690ec6583b97225c0),platform=Mac OS X 10.11.6 x86_64)", 
+              ""
+            ], 
+            "status": "failed"
+          }, 
+          "step_type": "when"
+        }, 
+        {
+          "keyword": "Then", 
+          "location": "features/todo_list.feature:11", 
+          "name": "the todo list contains \"Buy Milk\"", 
+          "step_type": "then"
+        }
+      ], 
+      "tags": [
+        "p0"
+      ], 
+      "type": "scenario"
+    }, 
+    {
+      "keyword": "Scenario", 
+      "location": "features/todo_list.feature:14", 
+      "name": "Mark todo as complete", 
+      "steps": [
+        {
+          "keyword": "Given", 
+          "location": "features/todo_list.feature:6", 
+          "match": {
+            "arguments": [], 
+            "location": "features/steps/landing.py:5"
+          }, 
+          "name": "TodoMVC is opened in the browser", 
+          "result": {
+            "duration": 1.58259916305542, 
+            "error_message": "ABORTED: By user (KeyboardInterrupt).", 
+            "status": "failed"
+          }, 
+          "step_type": "given"
+        }, 
+        {
+          "keyword": "Given", 
+          "location": "features/todo_list.feature:15", 
+          "name": "a todo for \"Buy Milk\" is added", 
+          "step_type": "given"
+        }, 
+        {
+          "keyword": "When", 
+          "location": "features/todo_list.feature:16", 
+          "name": "the todo \"Buy Milk\" is marked complete", 
+          "step_type": "when"
+        }, 
+        {
+          "keyword": "Then", 
+          "location": "features/todo_list.feature:17", 
+          "name": "todo \"Buy Milk\" is checked off", 
+          "step_type": "then"
+        }
+      ], 
+      "tags": [
+        "p0"
+      ], 
+      "type": "scenario"
+    }
+  ], 
+  "keyword": "Feature", 
+  "location": "features/todo_list.feature:1", 
+  "name": "Adding and Modifying items in the Todo list", 
+  "status": "failed", 
+  "tags": []
+}
+]
