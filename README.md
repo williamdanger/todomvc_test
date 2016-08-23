@@ -26,19 +26,18 @@ Assuming virtualenvwrapper is installed
     $ behave --tags p0
     
     
- ## Adding Tests
+## Adding Tests
  
- #### Gherkin
- Gherkin is a DSL for describing test behaviors with a `Given`, `When`, `Then` syntax
+#### Gherkin
+Gherkin is a DSL for describing test behaviors with a `Given`, `When`, `Then` Syntax
  
- #### Step Implementations
- Each line of Gherkin is parsed and matched to a python function by the behave runner.
+#### Step Implementations
+Each line of Gherkin is parsed and matched to a python function by the behave runner.
  
- ##### Context object
- Context is cleared between scenarios. `browser` instance per scenario.
+#### WIP
+The tag `@wip` can be used to mark a test as incomplete or unstable. This is useful for flapping test, or tests that have been written ahead of feature completion.
  
- 
- ## Debugging Test Failures
+## Debugging Test Failures
 `ipdb` can be invoked on test failure by setting the `DEBUG_ON_ERROR` flag.
 
     $ behave -v -D DEBUG_ON_ERROR
